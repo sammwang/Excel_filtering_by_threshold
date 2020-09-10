@@ -70,7 +70,7 @@ def autoextract(inputfile,outputfile):
 		# copying the cell values from source
 		# excel file to destination excel file
 		for i in range(1, mr + 1):
-			if i>2:
+			if i>2: #Start from the 2nd row because 1st row is the header
 				if float(ws1.cell(row=i, column=referVal).value) >= threshold:
 					lastrow = len(ws2['A']) # Check the last row of Column A for appending.
 					count+=1
